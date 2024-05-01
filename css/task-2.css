@@ -1,0 +1,17 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    width: 1128px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 48px;
+    row-gap: 24px;
+}
+
+.li-image {
+    width: calc((100% - 48px*2) / 3);
+}

@@ -1,18 +1,13 @@
+const categories = document.querySelector("#categories"); 
+const categoriesItems = document.querySelectorAll(".item");
 
+console.log("Numbers of categories:",categoriesItems.length); 
 
-function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    const totalPrice = quantity * pricePerDroid;
-    const messageEror = "Insufficient funds!";
-    const message = "You ordered " + quantity + " droids worth " + totalPrice + " credits!";
-    if (customerCredits < totalPrice) {
-        return messageEror;
-    } else {
-        return message;
-    }
-}
-console.log(makeTransaction(5, 3000, 23000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000, 15000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 5000, 8000)); // "Insufficient funds!"
-console.log(makeTransaction(8, 2000, 10000)); // "Insufficient funds!"
-console.log(makeTransaction(10, 500, 5000));  // "You ordered 10 droids worth 5000 credits!"
+categoriesItems.forEach(item => {
+    const categoryTitle = item.querySelector('h2').textContent;
+    const categoryItemsCount = item.querySelectorAll('ul > li').length;
+    
+    console.log (`Category: ${categoryTitle}`);
+    console.log (`Elements:${categoryItemsCount}`);
+});
 
